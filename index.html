@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lyrical Reels Pricing - Rohit Sharma</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500;700&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Poppins', sans-serif;
             text-align: center;
             transition: background 0.5s, color 0.5s;
         }
+
         .light-mode {
             background: linear-gradient(45deg, #ffffff, #f8f9fa, #e9ecef);
             color: #333;
         }
+
         .dark-mode {
             background: linear-gradient(45deg, #1e1e1e, #121212, #1e1e1e);
             color: white;
         }
+
         .toggle-container {
             display: flex;
             align-items: center;
@@ -32,16 +39,19 @@
             margin-top: 20px;
             cursor: pointer;
         }
+
         .toggle-icon {
             width: 30px;
             height: 30px;
             transition: transform 0.5s;
         }
+
         .toggle-text {
             font-size: 16px;
             font-weight: bold;
             transition: 0.3s;
         }
+
         .container {
             width: 90%;
             max-width: 800px;
@@ -51,14 +61,17 @@
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(255, 87, 34, 0.6);
         }
+
         .light-mode .container {
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 0 20px rgba(255, 87, 34, 0.3);
         }
+
         h1 {
             font-family: 'Montserrat', sans-serif;
             color: #ff5722;
         }
+
         .animated-text {
             font-size: 20px;
             font-weight: bold;
@@ -66,9 +79,11 @@
             text-shadow: 0 0 10px #ffcc00;
             margin-bottom: 10px;
         }
+
         .table-container {
             overflow-x: auto;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -77,77 +92,91 @@
             border-radius: 10px;
             overflow: hidden;
         }
-        th, td {
+
+        th,
+        td {
             border: 1px solid #333;
             padding: 12px;
             text-align: center;
             font-size: 16px;
         }
+
         th {
             background: #ff5722;
             color: white;
         }
+
         td {
             background: #282828;
             transition: 0.3s;
         }
+
         td:hover {
             background: #ff3d00;
             transform: scale(1.05);
             box-shadow: 0 0 10px rgba(255, 61, 0, 0.8);
         }
+
         .light-mode td {
             background: #f5f5f5;
         }
+
         .light-mode td:hover {
             background: #ffcc00;
             box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
         }
+
         .collab {
             margin-top: 15px;
             font-size: 16px;
             font-weight: bold;
             color: #ff5722;
         }
-        .cta {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 14px 25px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    background: linear-gradient(45deg, #ff5722, #ff9800);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 10px rgba(255, 87, 34, 0.6);
-    position: relative;
-    overflow: hidden;
-}
 
-.cta:hover {
-    background: linear-gradient(45deg, #ff9800, #ff3d00);
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 61, 0, 0.8);
-}
+        .cta {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #ff5722, #ff9800);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(255, 87, 34, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta:hover {
+            background: linear-gradient(45deg, #ff9800, #ff3d00);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 61, 0, 0.8);
+        }
 
         @media (max-width: 600px) {
-    #h1 {
-        font-size: 20px; /* Adjust font size for smaller screens */
-        white-space: nowrap; /* Prevent text from wrapping */
-    }
-    .animated-text {
-        font-size: 16px; /* Reduce animated text size */
-    }
-}
+            #h1 {
+                font-size: 20px;
+                /* Adjust font size for smaller screens */
+                white-space: nowrap;
+                /* Prevent text from wrapping */
+            }
 
+            .animated-text {
+                font-size: 16px;
+                /* Reduce animated text size */
+            }
+        }
     </style>
 </head>
+
 <body class="dark-mode">
     <!-- Toggle Mode (Clickable) -->
     <div class="toggle-container" onclick="toggleMode()">
-        <img id="toggle-icon" class="toggle-icon" src="https://img.icons8.com/ios-filled/50/ffffff/sun--v1.png" alt="Toggle Icon">
+        <img id="toggle-icon" class="toggle-icon" src="https://img.icons8.com/ios-filled/50/ffffff/sun--v1.png"
+            alt="Toggle Icon">
         <span id="toggle-text" class="toggle-text">Light Mode</span>
     </div>
 
@@ -238,7 +267,7 @@
             } else if (hour >= 17 && hour < 21) {
                 greeting = "Good Evening! 🌆";
             } else {
-                greeting = "Good Night!";
+                greeting = "Peaceful Night!";
             }
             document.getElementById('greeting').textContent = greeting;
         }
@@ -246,4 +275,5 @@
         updateGreeting();
     </script>
 </body>
+
 </html>
