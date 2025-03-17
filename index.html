@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrical Reels Pricing - Rohit Sharma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #333;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        .username {
+            font-size: 18px;
+            color: #555;
+        }
+        .collab {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="greeting"></h1>
+        <h1>Lyrical Reels Pricing Chart</h1>
+        <p class="username">Created by Rohit Sharma (@jaani_lyrical)</p>
+
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Basic Edit Price (₹)</th>
+                <th>Advanced Edit Price (₹)</th>
+            </tr>
+            <tr>
+                <td>1 Reel (Edit + Post)</td>
+                <td>₹150</td>
+                <td>₹220</td>
+            </tr>
+            <tr>
+                <td>5 Reels (Edit + Post)</td>
+                <td>₹700</td>
+                <td>₹1,050</td>
+            </tr>
+            <tr>
+                <td>10 Reels (Edit + Post)</td>
+                <td>₹1,300</td>
+                <td>₹2,200</td>
+            </tr>
+            <tr>
+                <td>1 Reel (Edit + Post + Story)</td>
+                <td>₹250</td>
+                <td>₹320</td>
+            </tr>
+            <tr>
+                <td>5 Reels (Edit + Post + Story)</td>
+                <td>₹1,200</td>
+                <td>₹1,750</td>
+            </tr>
+            <tr>
+                <td>10 Reels (Edit + Post + Story)</td>
+                <td>₹2,200</td>
+                <td>₹3,400</td>
+            </tr>
+            <tr>
+                <td>Only Edit (No Post, No Story)</td>
+                <td>₹100</td>
+                <td>₹170</td>
+            </tr>
+        </table>
+
+        <p class="collab">📌 Collab Feature → +₹100 Extra</p>
+    </div>
+
+    <script>
+        function updateGreeting() {
+            const now = new Date();
+            const indiaTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
+            const hour = indiaTime.getHours();
+            let greeting;
+
+            if (hour >= 5 && hour < 12) {
+                greeting = "Good Morning!";
+            } else if (hour >= 12 && hour < 17) {
+                greeting = "Good Noon!";
+            } else if (hour >= 17 && hour < 21) {
+                greeting = "Good Evening!";
+            } else {
+                greeting = "Good Night!";
+            }
+
+            document.getElementById('greeting').textContent = greeting;
+        }
+
+        updateGreeting(); // Initial greeting
+    </script>
+
+</body>
+</html>
